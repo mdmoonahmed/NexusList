@@ -1,44 +1,31 @@
-'use client';
 import Link from 'next/link';
-import { useState, useEffect } from 'react';
-import { getCookie } from 'cookies-next'; 
 
-export default function Navbar() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-
-  useEffect(() => {
-    const auth = document.cookie.includes('auth_token=true');
-    setIsLoggedIn(auth);
-  }, []);
-
+export default function Footer() {
   return (
-    <nav className="bg-white border-b border-gray-100 sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16 items-center">
-          <div className="flex-shrink-0">
-            <Link href="/" className="text-2xl font-bold text-blue-600">
-              NexusList
-            </Link>
+    <footer className="bg-white border-t border-gray-100">
+      <div className="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="col-span-1 md:col-span-2">
+            <h2 className="text-xl font-bold text-blue-600 mb-4">NexusList</h2>
+            <p className="text-gray-500 max-w-xs">
+              The ultimate platform for catalog management. Built with Next.js 15.
+            </p>
           </div>
-          
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-8">
-              <Link href="/" className="text-gray-600 hover:text-blue-600 px-3 py-2 font-medium">Home</Link>
-              <Link href="/items" className="text-gray-600 hover:text-blue-600 px-3 py-2 font-medium">Explore Items</Link>
-              
-              {isLoggedIn ? (
-                <Link href="/add-item" className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">
-                  + Add Item
-                </Link>
-              ) : (
-                <Link href="/login" className="text-gray-600 hover:text-blue-600 px-3 py-2 font-medium">
-                  Login
-                </Link>
-              )}
-            </div>
+
+          <div>
+            <h3 className="text-sm font-semibold text-gray-900 uppercase mb-4">Platform</h3>
+            <ul className="space-y-2">
+              <li><Link href="/" className="text-gray-500 hover:text-blue-600">Home</Link></li>
+              <li><Link href="/items" className="text-gray-500 hover:text-blue-600">Explore</Link></li>
+              <li><Link href="/login" className="text-gray-500 hover:text-blue-600">Login</Link></li>
+            </ul>
           </div>
         </div>
+        
+        <div className="mt-12 pt-8 border-t border-gray-100 text-center text-gray-400 text-sm">
+          &copy; {new Date().getFullYear()} NexusList.
+        </div>
       </div>
-    </nav>
+    </footer>
   );
 }
