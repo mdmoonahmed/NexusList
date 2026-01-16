@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -13,6 +11,7 @@ body {
   scroll-behavior: smooth;
 }
 
+/* In v4, you add custom components using the @theme or standard CSS blocks */
 @layer components {
   .section-container {
     @apply max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8;
