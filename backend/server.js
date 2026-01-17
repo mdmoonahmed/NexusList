@@ -173,6 +173,7 @@ app.post("/api/items", (req, res) => {
   res.status(201).json(newItem);
 });
 
-app.listen(PORT, () => {
-  console.log(`Express server running at http://localhost:${PORT}`);
-});
+module.exports= app;
+// app.listen(PORT, () => {
+//   console.log(`Express server running at http://localhost:${PORT}`);
+// });

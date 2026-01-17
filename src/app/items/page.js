@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default async function ItemsPage() {
-  const res = await fetch("http://localhost:5000/api/items", {
+  const res = await fetch("https://nexuslistbackend.vercel.app/api/items", {
     cache: "no-store",
   });
   const items = await res.json();

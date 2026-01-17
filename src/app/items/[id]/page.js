@@ -4,9 +4,12 @@ import Link from "next/link";
 export default async function ItemDetails({ params }) {
   const { id } = await params;
 
-  const res = await fetch(`http://localhost:5000/api/items/${id}`, {
-    cache: "no-store",
-  });
+  const res = await fetch(
+    `https://nexuslistbackend.vercel.app/api/items/${id}`,
+    {
+      cache: "no-store",
+    },
+  );
 
   if (!res.ok) {
     return <div className="p-20 text-center">Item not found</div>;
@@ -28,8 +31,8 @@ export default async function ItemDetails({ params }) {
           src={item.image}
           alt={item.name}
           width={800}
-          height={600} 
-          priority 
+          height={600}
+          priority
           className="w-full rounded-2xl shadow-lg object-cover"
         />
         <div>
