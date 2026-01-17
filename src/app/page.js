@@ -5,6 +5,7 @@ import Stats from "./components/Stats";
 import CTA from "./components/CTA";
 import { Testimonials } from "./components/Testimonials";
 import { Categories } from "./components/Categories";
+import ComparisonSection from "./components/Comparison";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
         <Categories></Categories>
         <Features></Features>
         <Stats></Stats>
+        <ComparisonSection></ComparisonSection>
         <Testimonials></Testimonials>
         <CTA></CTA>
      </main>
