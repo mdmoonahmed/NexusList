@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# NexusList | Premium Item Management System
 
-## Getting Started
+NexusList is a modern, high-performance inventory and item cataloging application. It features a sleek 7-section landing page, a protected administration dashboard for adding new items, and a dynamic catalog explorer powered by a custom Express.js backend.
 
-First, run the development server:
+## 🚀 Live Demo
+- **Frontend:** [Your Vercel URL Here]
+- **Backend API:** [Your Backend Vercel/Render URL Here]
 
+## 🛠️ Tech Stack
+
+### Frontend
+- **Framework:** Next.js 15 (App Router)
+- **Styling:** Tailwind CSS
+- **State & Logic:** React Hooks (useState, useEffect)
+- **Notifications:** React Hot Toast
+- **Authentication:** Cookie-based (using cookies-next)
+
+### Backend
+- **Server:** Node.js & Express.js
+- **Middleware:** CORS, JSON Parser
+- **Deployment:** Vercel Serverless Functions
+
+## ✨ Key Features
+- **7-Section Landing Page:** Includes Hero, Features, Stats, About, Categories, CTA, and Footer.
+- **Dynamic Explorer:** Real-time fetching of items from the Express API.
+- **Protected Routes:** Next.js Middleware prevents unauthorized access to the "Add Item" page.
+- **Image Optimization:** Uses `next/image` with remote patterns for high-performance asset loading.
+- **Responsive Design:** Fully optimized for mobile, tablet, and desktop views.
+
+## 🔐 Demo Credentials
+To access the "Add Item" feature, use the following credentials on the Login page:
+- **Email:** `demo@gmail.com`
+- **Password:** `123456`
+
+## ⚙️ Installation & Setup
+
+### 1. Clone the Repository
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+git clone [https://github.com/your-username/nexuslist.git](https://github.com/your-username/nexuslist.git)
+cd nexuslist
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Backend Setup 
+cd backend
+npm install
+npm run dev # Starts server on http://localhost:5000
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### 3. Fronted Setup
+cd frontend
+npm install
+npm run dev # Starts Next.js on http://localhost:3000
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
