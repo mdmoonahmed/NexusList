@@ -3,8 +3,8 @@
 NexusList is a modern, high-performance inventory and item cataloging application. It features a sleek 7-section landing page, a protected administration dashboard for adding new items, and a dynamic catalog explorer powered by a custom Express.js backend.
 
 ## 🚀 Live Demo
-- **Frontend:** [Your Vercel URL Here]
-- **Backend API:** [Your Backend Vercel/Render URL Here]
+- **Frontend:** [https://nexuslist.vercel.app/]
+- **Backend API:** [https://nexuslistbackend.vercel.app/api/items]
 
 ## 🛠️ Tech Stack
 
@@ -38,13 +38,16 @@ To access the "Add Item" feature, use the following credentials on the Login pag
 ```bash
 git clone [https://github.com/your-username/nexuslist.git](https://github.com/your-username/nexuslist.git)
 cd nexuslist
+```
 
 ### 2. Backend Setup 
+```bash
 cd backend
 npm install
 npm run dev # Starts server on http://localhost:5000
-
+```
 ### 3. Fronted Setup
+```bash
 cd frontend
 npm install
 npm run dev # Starts Next.js on http://localhost:3000
